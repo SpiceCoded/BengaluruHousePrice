@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+
+<form class="form">
+
+	<h2>Area (Square Feet)</h2>
+    <input class="area" type="text" id="uiSqft" name="Squareft" value="1000">
+
+	<h2>BHK</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+		<label for="radio-bhk-1">1</label>
+		<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+		<label for="radio-bhk-2">2</label>
+		<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+		<label for="radio-bhk-3">3</label>
+		<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+		<label for="radio-bhk-4">4</label>
+		<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+		<label for="radio-bhk-5">5</label>
+	</div>
+
+	<h2>Bath</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+		<label for="radio-bath-5">5</label>
+	</div>
+
+    <select class="area_type" id="uiAreaType">
+        <option value="" disabled selected>Select Area Type</option>
+        <option value="Super built-up Area">Super built-up Area</option>
+        <option value="Built-up Area">Built-up Area</option>
+        <option value="Plot Area">Plot Area</option>
+        <option value="Carpet Area">Carpet Area</option>
+    </select>
+
+	<h2>Ready to Move?</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-ready-yes" name="uiIsReady" value="1" checked/>
+		<label for="radio-ready-yes">Yes</label>
+
+		<input type="radio" id="radio-ready-no" name="uiIsReady" value="0"/>
+		<label for="radio-ready-no">No</label>
+	</div>
+        <h2>Balcony</h2>
+    <div class="switch-field">
+        <input type="radio" name="uiBalcony" value="0" id="bal-0"><label for="bal-0">0</label>
+        <input type="radio" name="uiBalcony" value="1" id="bal-1" checked><label for="bal-1">1</label>
+        <input type="radio" name="uiBalcony" value="2" id="bal-2"><label for="bal-2">2</label>
+        <input type="radio" name="uiBalcony" value="3" id="bal-3"><label for="bal-3">3</label>
+    </div>
+	<h2>Location</h2>
+	<select class="location" id="uiLocations">
+		<option value="" disabled selected>Choose a Location</option>
+		<option>Electronic City</option>
+		<option>Rajaji Nagar</option>
+	</select>
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+
+	<div id="uiEstimatedPrice" class="result"></div>
+</form>
+
+</body>
+</html>
